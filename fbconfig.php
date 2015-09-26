@@ -42,7 +42,7 @@ if ( isset( $session ) ) {
  $electronics= array('phone','laptop');
 
  $recommender= new Recommender();
- $recommender->getRelevantOLXadsAction($id,array('sports'=>$sports,'movies'=>$movies));
+ $recommender->getRelevantOLXadsAction($id,array('sports'=>$sports,'electronics'=>$electronics));
  	
 
 

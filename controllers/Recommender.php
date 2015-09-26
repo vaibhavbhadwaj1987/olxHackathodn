@@ -11,10 +11,11 @@ class Recommender{
 	
 	public function getRelevantOLXadsAction($id,$data){
 		echo "<html><body>";
+		$count=1;
 		foreach($data as $value){
 			foreach($value as $v){
-			echo "<a href=http://olx.in/all-results/q-1-".$v.">product</a>";
-				echo "\n";
+			echo "<a href=http://olx.in/all-results/q-1-".$v.">product-$count</a><br/>";
+			$count++;
 			}
 		}
 		echo "</body></html>";;

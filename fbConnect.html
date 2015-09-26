@@ -1,0 +1,22 @@
+<?php
+session_start(); 
+?>
+<!doctype html>
+<html xmlns:fb="http://www.facebook.com/2008/fbml">
+  <body>
+  <?php if ($_SESSION['FBID']): ?>      <!--  After user login  -->
+<div class="container">
+<div class="span4">
+ <ul class="nav nav-list">
+</ul></div></div>
+    <?php else: ?>     <!-- Before login --> 
+<div class="container">
+<h1>Login with Facebook</h1>
+<div>
+      <a href="fbconfig.php">Login with Facebook</a></div>
+      </div>
+    <?php endif ?>
+  </body>
+</html>
+
+

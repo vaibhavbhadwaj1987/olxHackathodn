@@ -2,7 +2,8 @@
 session_start();
 // added in v4.0.0
 require_once 'autoload.php';
-include('controllers/Recommender.php');
+require_once 'controllers/Recommender.php';
+
 use Facebook\FacebookSession;
 use Facebook\FacebookRedirectLoginHelper;
 use Facebook\FacebookRequest;
@@ -30,9 +31,10 @@ if ( isset( $session ) ) {
   // graph api request for user data
   $request = new FacebookRequest($session, 'GET', '/me' );
   $response = $request->execute();
-  // get response
+  
+// get response
   $graphObject = $response->getGraphObject();
-  $fbid = $graphObject->getProperty('id');              // To Get Facebook ID
+ $fbid = $graphObject->getProperty('id');              // To Get Facebook ID
   $fbfullname = $graphObject->getProperty('name'); // To Get Facebook full name
 	    $femail = $graphObject->getProperty('email');    // To Get Facebook email ID
  $id= $fbId;

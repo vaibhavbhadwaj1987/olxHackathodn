@@ -1,12 +1,12 @@
 <?php
-
 class RecommenderService{
 	public function saveUserData($fbId,$userData){
 
 	}
 
 	public function getRelevantAdsFromOlx($userData){
-		foreach($userData as $category=>$values){
+	print_r($userData);die;	
+	foreach($userData as $category=>$values){
 			
 		}
 	}

@@ -1,6 +1,5 @@
 <?php
-include('../services/RecommenderService.php')
-
+include('/var/www/html/olxHackathodn/services/RecommenderService.php');
 class Recommender{
 	
 	private $recommenderService;
@@ -11,10 +10,18 @@ class Recommender{
 	}
 	
 	public function getRelevantOLXadsAction($id,$data){
+		echo "<html><body>";
+		foreach($data as $value){
+			foreach($value as $v){
+			echo "<a href=http://olx.in/all-results/q-1-".$v.">product</a>";
+				echo "\n";
+			}
+		}
+		echo "</body></html>";;
 		/*if(!$this->getUserData($fbId)){
 			$this->saveUserData($userId,$userData)
 	 	}*/
-		$ads=$this->recommenderService->getRelevantAdsFromOlx($userData);	
+		//$ads=$this->recommenderService->getRelevantAdsFromOlx($userData);	
 		return json_encode($ads);
 	}
 	
